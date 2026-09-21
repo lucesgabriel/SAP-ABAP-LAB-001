@@ -1,0 +1,37 @@
+project:
+  id: SAP-ABAP-LAB-001
+  purpose: "Laboratorio escalable de desarrollo ABAP moderno"
+
+system:
+  description: "CROWN 2025"
+  sid: S4H
+  client: "100"
+  application_server: crown.sapvista.com
+  instance_number: "00"
+  platform: "SAP S/4HANA 2025 on-premise"
+  abap_platform: "2025"
+  sap_basis_release: "816"
+
+arc1:
+  hermes_server_name: sap_arc1_s4h_100
+  claude_desktop_server_name: sap-arc1-s4h-100
+  endpoint_scheme: https
+  credentials: "Private local store; never repository"
+  tls_exception: "SAP_INSECURE=true is temporary until certificate renewal"
+
+verified_capabilities:
+  hana: true
+  rap_cds: true
+  amdp: true
+  ui5_fiori: true
+  ui5_repository_deploy: true
+  cts_transports: true
+  gcts: true
+  flp_customizing: true
+  abapgit: false
+  repository_text_search: false
+
+known_limitations:
+  - "abapGit ICF endpoint is not active; gCTS is available."
+  - "ADT repository textSearch ICF service is not active."
+  - "TLS certificate requires temporary local ARC-1 exception; Basis renewal pending."

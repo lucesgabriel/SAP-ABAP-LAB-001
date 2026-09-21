@@ -1,0 +1,131 @@
+SAP S/4HANA 2025 Server Access Credentials:
+Aplication Server: crown.sapvista.com
+Client: 100
+Username: SV5_000202
+Password: [REMOVED FROM PROJECT - use the private ARC-1 credential store]
+
+Connection Type:  
+Custom Application Server
+System Connection Parameters
+Description: CROWN 2025
+Application Server: crown.sapvista.com
+Instance Number: 00
+System ID: S4H
+SAProuter String: (vacío)
+
+-----------------------------------------
+
+08/22/2026       Dynamic List Display                                                                 1
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+|Component          |Release|SP-Level|  Support Package   |Short Description of Component             |
+-------------------------------------------------------------------------------------------------------
+|SAP_BASIS          |  816  |0000    |         -          |SAP Basis Component                        |
+|SAP_ABA            |  816  |0000    |         -          |Cross-Application Component                |
+|SAP_GWFND          |  816  |0000    |         -          |SAP Gateway Foundation                     |
+|SAP_UI             |  816  |0000    |         -          |User Interface Technology                  |
+|ST-PI              |  740  |0030    |  SAPK-74030INSTPI  |SAP Solution Tools Plug-In                 |
+|SAP_BW             |  816  |0000    |         -          |SAP Business Warehouse                     |
+|MDG_FND            |  809  |0000    |         -          |S/4HANA MDG Foundation                     |
+|S4FND              |  109  |0000    |         -          |S/4HANA Foundation                         |
+|MDG_APPL           |  809  |0000    |         -          |S/4HANA MDG Applications                   |
+|S4CEXT             |  109  |0000    |         -          |S/4HANA Applications EXT                   |
+|S4CORE             |  109  |0000    |         -          |S/4HANA Core Applications 1                |
+|S4HCM              |  102  |0000    |         -          |Human Resources                            |
+|S4HCMCAE           |  102  |0000    |         -          |Subcomponent S4HCMCAE of S4HCM             |
+|S4HCMCAR           |  102  |0000    |         -          |Subcomponent S4HCMCAR of S4HCM             |
+|S4HCMCAT           |  102  |0000    |         -          |Subcomponent S4HCMCAT of S4HCM             |
+|S4HCMCAU           |  102  |0000    |         -          |Subcomponent S4HCMCAU of S4HCM             |
+|S4HCMCBE           |  102  |0000    |         -          |Subcomponent S4HCMCBE of S4HCM             |
+|S4HCMCBG           |  102  |0000    |         -          |Subcomponent S4HCMCBG of S4HCM             |
+|S4HCMCBR           |  102  |0000    |         -          |Subcomponent S4HCMCBR of S4HCM             |
+|S4HCMCCA           |  102  |0000    |         -          |Subcomponent S4HCMCCA of S4HCM             |
+|S4HCMCCH           |  102  |0000    |         -          |Subcomponent S4HCMCCH of S4HCM             |
+|S4HCMCCL           |  102  |0000    |         -          |Subcomponent S4HCMCCL of S4HCM             |
+|S4HCMCCN           |  102  |0000    |         -          |Subcomponent S4HCMCCN of S4HCM             |
+|S4HCMCCO           |  102  |0000    |         -          |Subcomponent S4HCMCCO of S4HCM             |
+|S4HCMCCZ           |  102  |0000    |         -          |Subcomponent S4HCMCCZ of S4HCM             |
+|S4HCMCDE           |  102  |0000    |         -          |Subcomponent S4HCMCDE of S4HCM             |
+|S4HCMCDK           |  102  |0000    |         -          |Subcomponent S4HCMCDK of S4HCM             |
+|S4HCMCEG           |  102  |0000    |         -          |Subcomponent S4HCMCEG of S4HCM             |
+|S4HCMCES           |  102  |0000    |         -          |Subcomponent S4HCMCES of S4HCM             |
+|S4HCMCFI           |  102  |0000    |         -          |Subcomponent S4HCMCFI of S4HCM             |
+|S4HCMCFR           |  102  |0000    |         -          |Subcomponent S4HCMCFR of S4HCM             |
+|S4HCMCGB           |  102  |0000    |         -          |Subcomponent S4HCMCGB of S4HCM             |
+|S4HCMCGR           |  102  |0000    |         -          |Subcomponent S4HCMCGR of S4HCM             |
+|S4HCMCHK           |  102  |0000    |         -          |Subcomponent S4HCMCHK of S4HCM             |
+|S4HCMCHR           |  102  |0000    |         -          |Subcomponent S4HCMCHR of S4HCM             |
+|S4HCMCHU           |  102  |0000    |         -          |Subcomponent S4HCMCHU of S4HCM             |
+|S4HCMCID           |  102  |0000    |         -          |Subcomponent S4HCMCID of S4HCM             |
+|S4HCMCIE           |  102  |0000    |         -          |Subcomponent S4HCMCIE of S4HCM             |
+|S4HCMCIN           |  102  |0000    |         -          |Subcomponent S4HCMCIN of S4HCM             |
+|S4HCMCIT           |  102  |0000    |         -          |Subcomponent S4HCMCIT of S4HCM             |
+|S4HCMCJP           |  102  |0000    |         -          |Subcomponent S4HCMCJP of S4HCM             |
+|S4HCMCKR           |  102  |0000    |         -          |Subcomponent S4HCMCKR of S4HCM             |
+|S4HCMCKW           |  102  |0000    |         -          |Subcomponent S4HCMCKW of S4HCM             |
+|S4HCMCKZ           |  102  |0000    |         -          |Subcomponent S4HCMCKZ of S4HCM             |
+|S4HCMCMX           |  102  |0000    |         -          |Subcomponent S4HCMCMX of S4HCM             |
+|S4HCMCMY           |  102  |0000    |         -          |Subcomponent S4HCMCMY of S4HCM             |
+|S4HCMCNL           |  102  |0000    |         -          |Subcomponent S4HCMCNL of S4HCM             |
+|S4HCMCNO           |  102  |0000    |         -          |Subcomponent S4HCMCNO of S4HCM             |
+|S4HCMCNZ           |  102  |0000    |         -          |Subcomponent S4HCMCNZ of S4HCM             |
+|S4HCMCOM           |  102  |0000    |         -          |Subcomponent S4HCMCOM of S4HCM             |
+|S4HCMCPH           |  102  |0000    |         -          |Subcomponent S4HCMCPH of S4HCM             |
+|S4HCMCPL           |  102  |0000    |         -          |Subcomponent S4HCMCPL of S4HCM             |
+|S4HCMCPT           |  102  |0000    |         -          |Subcomponent S4HCMCPT of S4HCM             |
+|S4HCMCQA           |  102  |0000    |         -          |Subcomponent S4HCMCQA of S4HCM             |
+|S4HCMCRO           |  102  |0000    |         -          |Subcomponent S4HCMCRO of S4HCM             |
+|S4HCMCRU           |  102  |0000    |         -          |Subcomponent S4HCMCRU of S4HCM             |
+|S4HCMCSA           |  102  |0000    |         -          |Subcomponent S4HCMCSA of S4HCM             |
+|S4HCMCSE           |  102  |0000    |         -          |Subcomponent S4HCMCSE of S4HCM             |
+|S4HCMCSG           |  102  |0000    |         -          |Subcomponent S4HCMCSG of S4HCM             |
+|S4HCMCSI           |  102  |0000    |         -          |Subcomponent S4HCMCSI of S4HCM             |
+|S4HCMCSK           |  102  |0000    |         -          |Subcomponent S4HCMCSK of S4HCM             |
+|S4HCMCTH           |  102  |0000    |         -          |Subcomponent S4HCMCTH of S4HCM             |
+|S4HCMCTR           |  102  |0000    |         -          |Subcomponent S4HCMCTR of S4HCM             |
+|S4HCMCTW           |  102  |0000    |         -          |Subcomponent S4HCMCTW of S4HCM             |
+|S4HCMCUA           |  102  |0000    |         -          |Subcomponent S4HCMCUA of S4HCM             |
+|S4HCMCUN           |  102  |0000    |         -          |Subcomponent S4HCMCUN of S4HCM             |
+|S4HCMCUS           |  102  |0000    |         -          |Subcomponent S4HCMCUS of S4HCM             |
+|S4HCMCVE           |  102  |0000    |         -          |Subcomponent S4HCMCVE of S4HCM             |
+|S4HCMCZA           |  102  |0000    |         -          |Subcomponent S4HCMCZA of S4HCM             |
+|S4HCMGXX           |  102  |0000    |         -          |Subcomponent S4HCMGXX of S4HCM             |
+|S4HCMRXX           |  102  |0000    |         -          |Subcomponent S4HCMRXX of S4HCM             |
+|EA-DFPS            |  809  |0000    |         -          |S/4HANA DFPS                               |
+|EA-PS              |  809  |0000    |         -          |S/4HANA PS                                 |
+|FI-CAX             |  809  |0000    |         -          |S/4HANA FI-CA Extended                     |
+|GTSCORE            |  300  |0000    |         -          |SAP Global Trade Services 300              |
+|IS-OIL             |  809  |0000    |         -          |S/4HANA IS-OIL                             |
+|IS-PRA             |  809  |0000    |         -          |S/4HANA IS-PRA                             |
+|IS-PS-CA           |  809  |0000    |         -          |S/4HANA IS-PS-CA                           |
+|IS-UT              |  809  |0000    |         -          |S/4HANA IS-UT                              |
+|S4COREOP           |  109  |0000    |         -          |S/4HANA Core Applications 2                |
+|S4DEPREC           |  109  |0000    |         -          |S/4HANA Core Applications 3                |
+|GBX01HR5           |  605  |0032    |SAPK-60532INGBX01HR5|FIORI X1 HCM                               |
+|UIGRCGTS           |  300  |0000    |         -          |SAP FIORI FOR SAP Global Trade Services 3.0|
+|UIHR002            |  100  |0028    |SAPK-10028INUIHR002 |UI for ERP Human Capital Management 100    |
+|UIMDG001           |  200  |0013    |SAPK-20013INUIMDG001|UI for MDG                                 |
+|UIS4H              |  109  |0000    |         -          |UI S/4HANA                                 |
+|PERSONAS           |  300  |0019    |SAPK-30019INPERSONAS|PERSONAS - SAP GUI PERSONALISATION         |
+|ST-A/PI            |01W_731|0002    |     SAPKITABC9     |Servicetools for SAP Basis 731 and higher  |
+|HOME               |  DEV  |0000    |         -          |Customer Development (Standard)            |
+|ZCUSTOM_DEVELOPMENT|  DEV  |0000    |         -          |Cloud-Ready Custom Development             |
+|LOCAL              |  DEV  |0000    |         -          |System Local Development (Standard)        |
+|ZLOCAL             |  DEV  |0000    |         -          |Cloud-Ready Local Custom Development       |
+-------------------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------
+
+08/22/2026       Dynamic List Display                                                                 1
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+|Product                  |Release|SP / FP Stack         |Vendor |Short Description of Product Version|
+-------------------------------------------------------------------------------------------------------
+|SCREEN PERSONAS          |  3.0  |SP19                  |sap.com|SAP SCREEN PERSONAS 3.0             |
+|S4HANA ON PREMISE        | 2025  |Initial Shipment Stack|sap.com|SAP S/4HANA 2025                    |
+|ABAP PLATFORM            | 2025  |Initial Shipment Stack|sap.com|ABAP PLATFORM 2025                  |
+|SAP S/4HANA FOUNDATION   | 2025  |Initial Shipment Stack|sap.com|SAP S/4HANA FOUNDATION 2025         |
+|SAP FIORI FOR S4HANA     | 2025  |Initial Shipment Stack|sap.com|SAP FIORI FOR SAP S/4HANA 2025      |
+|SAP FIORI FES FOR S/4HANA| 2025  |Initial Shipment Stack|sap.com|SAP FIORI FES 2025 FOR S/4HANA      |
+-------------------------------------------------------------------------------------------------------

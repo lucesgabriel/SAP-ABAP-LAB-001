@@ -1,0 +1,2 @@
+001=No se encontraron equipos para la seleccion
+002=Lista de equipos - registros:

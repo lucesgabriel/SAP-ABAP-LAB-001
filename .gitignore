@@ -1,0 +1,23 @@
+# Secrets
+.env
+.env.*
+*.secret
+*.secrets
+*credentials*
+*cookies*
+
+# Local client settings
+.claude/settings.local.json
+.hermes/local*
+
+# Generated/cache
+__pycache__/
+*.pyc
+.cache/
+logs/
+artifacts/*
+!artifacts/README.md
+
+# Office/PDF temporary files
+~$*
+*.tmp

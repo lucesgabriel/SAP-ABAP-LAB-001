@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "id": "abap-001-equipos-cloud",
+  "title": "Lista de equipos PM: report ALV clasico -> clase ABAP Cloud",
+  "status": "active",
+  "created_on": "2026-09-21",
+  "system_config": "../../config/system.yaml",
+  "sap_package": "$TMP",
+  "transport_request": null
+}
