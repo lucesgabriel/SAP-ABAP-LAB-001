@@ -1,0 +1,370 @@
+{
+  "_comment": "Catálogo de la biblioteca local de referencia. Las rutas son relativas a la raíz de libros (variable SAP_LAB_BOOKS_ROOT o default_root, relativo a la raíz del repo). Las páginas son las del PDF (no las impresas). Los libros no se copian al repositorio; el índice de texto se genera en artifacts/books-index/ (ignorado por git). 'routes' enlaza con config/skills-routing.json.",
+  "default_root": "../books",
+  "root_env": "SAP_LAB_BOOKS_ROOT",
+  "index_dir": "artifacts/books-index",
+  "books": [
+    {
+      "slug": "cookbook-2026",
+      "title": "ABAP Cookbook - Practical Recipes for Modern Programming (2026)",
+      "pdf": "ABAP Cookbook - Practical Recipes for Modern Programming (2026)/ABAP Cookbook - Practical Recipes for Modern Programming (2026).pdf",
+      "supplements": "ABAP Cookbook - Practical Recipes for Modern Programming (2026)/supplements/978-1-4932-2777-8.zip",
+      "supplements_note": "Repositorio abapGit de la aplicación de ejemplo (abap-kochbuch-english), ABAP Cloud.",
+      "domains": [
+        "OO",
+        "API",
+        "ENH",
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "1", "title": "Introduction to Modern ABAP Development", "page": 21, "routes": [ "cloud" ], "key": true},
+        {"n": "2", "title": "The Application Scenario", "page": 41, "routes": [ "rap", "cloud" ]},
+        {"n": "3", "title": "Handling System Fields and Runtime Information", "page": 79, "routes": [ "cloud" ]},
+        {"n": "4", "title": "Table Analysis", "page": 99, "routes": [ "utilities" ]},
+        {"n": "5", "title": "Table Maintenance Using Business Configuration Maintenance Objects", "page": 111, "routes": [ "utilities" ]},
+        {"n": "6", "title": "Application Logs", "page": 151, "routes": [ "utilities" ], "key": true},
+        {"n": "7", "title": "Change Documents", "page": 177, "routes": [ "utilities" ]},
+        {"n": "8", "title": "Lock Objects", "page": 199, "routes": [ "utilities" ]},
+        {"n": "9", "title": "Number Range Objects", "page": 217, "routes": [ "utilities" ]},
+        {"n": "10", "title": "Background Processing", "page": 237, "routes": [ "utilities" ]},
+        {"n": "11", "title": "Email Dispatch", "page": 261, "routes": [ "utilities" ]},
+        {"n": "12", "title": "Parallelizing Application Logic", "page": 279, "routes": [ "utilities" ]},
+        {"n": "13", "title": "File Upload", "page": 299, "routes": [ "utilities" ]},
+        {"n": "14", "title": "Using Excel Files", "page": 309, "routes": [ "utilities" ]},
+        {"n": "15", "title": "Documenting Development Objects", "page": 335, "routes": [ "quality" ]},
+        {"n": "16", "title": "Authorizations", "page": 351, "routes": [ "auth" ], "key": true},
+        {"n": "17", "title": "Using APIs", "page": 367, "routes": [ "odata", "cloud" ], "key": true},
+        {"n": "18", "title": "Extensions in ABAP Cloud", "page": 387, "routes": [ "enh", "cloud" ], "key": true}
+      ]
+    },
+    {
+      "slug": "rap-2025",
+      "title": "ABAP RESTful Application Programming Model (2025)",
+      "pdf": "ABAP RESTful Application Programming Model (2025)/ABAP RESTful Application Programming Model (2025).pdf",
+      "supplements": "ABAP RESTful Application Programming Model (2025)/supplements/Sample Code and Development Objects.zip",
+      "supplements_note": "Código de los escenarios managed, unmanaged save y unmanaged (capítulos 10-12).",
+      "domains": [
+        "RAP",
+        "CDS",
+        "UI"
+      ],
+      "chapters": [
+        {"n": "1", "title": "Introduction to the ABAP RESTful Application Programming Model", "page": 25, "routes": [ "rap" ]},
+        {"n": "2", "title": "Core Data Services: Data Modeling", "page": 65, "routes": [ "cds", "rap" ]},
+        {"n": "3", "title": "Behavior Definition", "page": 119, "routes": [ "rap" ], "key": true},
+        {"n": "4", "title": "Entity Manipulation Language: Accessing Business Logic", "page": 215, "routes": [ "rap" ]},
+        {"n": "5", "title": "Behavior Implementation", "page": 239, "routes": [ "rap" ], "key": true},
+        {"n": "6", "title": "Business Services", "page": 281, "routes": [ "rap", "odata" ]},
+        {"n": "7", "title": "Extensibility of Business Objects", "page": 301, "routes": [ "enh", "rap" ]},
+        {"n": "8", "title": "Application Interfaces and SAP Fiori Elements", "page": 347, "routes": [ "ui", "rap" ], "key": true},
+        {"n": "10", "title": "Managed Scenario: Developing an Application with SAP Fiori Elements", "page": 391, "routes": [ "rap", "ui" ], "key": true},
+        {"n": "11", "title": "Managed Scenario with Unmanaged Save: Integrating an Existing Application", "page": 445, "routes": [ "rap", "migration" ]},
+        {"n": "12", "title": "Unmanaged Scenario: Reusing Existing Source Code", "page": 505, "routes": [ "rap", "migration" ]},
+        {"n": "13", "title": "Special Features in the Cloud Environment", "page": 541, "routes": [ "rap", "cloud" ]}
+      ]
+    },
+    {
+      "slug": "cds-2024",
+      "title": "Core Data Services for ABAP (2024)",
+      "pdf": "Core Data Services for ABAP (2024)/Core Data Services for ABAP (2024).pdf",
+      "supplements": "Core Data Services for ABAP (2024)/supplements/978-1-4932-2376-3.zip",
+      "supplements_note": "Fuentes DDLS/DCLS/BDEF por capítulo.",
+      "domains": [
+        "CDS",
+        "RAP",
+        "SQL"
+      ],
+      "chapters": [
+        {"n": "1", "title": "Modeling Your First CDS Views", "page": 23, "routes": [ "cds" ]},
+        {"n": "2", "title": "Fundamentals of CDS Data Modeling", "page": 53, "routes": [ "cds" ], "key": true},
+        {"n": "3", "title": "Associations", "page": 107, "routes": [ "cds" ], "key": true},
+        {"n": "4", "title": "Annotations", "page": 131, "routes": [ "cds", "ui" ]},
+        {"n": "5", "title": "Access Controls", "page": 161, "routes": [ "auth", "cds" ], "key": true},
+        {"n": "6", "title": "Business Services", "page": 211, "routes": [ "odata", "cds" ]},
+        {"n": "7", "title": "Native SAP HANA Functions in CDS", "page": 235, "routes": [ "sql", "cds" ]},
+        {"n": "8", "title": "Modeling Application Data", "page": 249, "routes": [ "cds" ]},
+        {"n": "9", "title": "The Virtual Data Model of SAP S/4HANA", "page": 275, "routes": [ "cds", "cloud", "pm" ]},
+        {"n": "10", "title": "Modeling Analytical Applications", "page": 303, "routes": [ "cds" ]},
+        {"n": "11", "title": "Modeling Transactional Applications", "page": 361, "routes": [ "rap", "cds" ]},
+        {"n": "12", "title": "Hierarchies in CDS", "page": 515, "routes": [ "cds" ]},
+        {"n": "13", "title": "CDS-Based Search Functionality", "page": 549, "routes": [ "cds", "ui" ]},
+        {"n": "14", "title": "Lifecycle and Stability", "page": 585, "routes": [ "cds", "cloud" ]},
+        {"n": "15", "title": "Extensions of CDS Views and Other Entities", "page": 599, "routes": [ "enh", "cds" ], "key": true},
+        {"n": "16", "title": "Automated Testing", "page": 631, "routes": [ "unit", "cds" ], "key": true},
+        {"n": "17", "title": "Troubleshooting", "page": 671, "routes": [ "cds" ]}
+      ]
+    },
+    {
+      "slug": "hana-2021",
+      "title": "ABAP Development for SAP HANA (2021)",
+      "pdf": "ABAP Development for SAP HANA (2021)/ABAP Development for SAP HANA (2021).pdf",
+      "domains": [
+        "SQL",
+        "CDS"
+      ],
+      "chapters": [
+        {"n": "4", "title": "Native SQL", "page": null, "routes": [ "sql" ]},
+        {"n": "5", "title": "SQLScript Programming", "page": null, "routes": [ "sql" ]},
+        {"n": "6", "title": "ABAP-Managed Database Procedures", "page": null, "routes": [ "sql" ], "key": true},
+        {"n": "8", "title": "Core Data Services", "page": null, "routes": [ "cds" ]},
+        {"n": "9", "title": "Open SQL and ABAP SQL", "page": null, "routes": [ "sql" ], "key": true},
+        {"n": "11", "title": "Performance and Optimization", "page": 99, "routes": [ "sql" ]}
+      ]
+    },
+    {
+      "slug": "attf-2022",
+      "title": "ABAP to the Future (2022)",
+      "pdf": "ABAP to the Future (2022)/ABAP to the Future (2022).pdf",
+      "supplements": "ABAP to the Future (2022)/supplements/978-1-4932-2156-1.zip",
+      "supplements_note": "Archivos SAPlink y quiz; código clásico, revisar antes de reutilizar en ABAP Cloud.",
+      "domains": [
+        "OO",
+        "SQL",
+        "RAP",
+        "UI",
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "1", "title": "Integrated Development Environment", "page": 31, "routes": [ "tooling" ]},
+        {"n": "2", "title": "abapGit", "page": 99, "routes": [ "transport" ]},
+        {"n": "3", "title": "New Language Features in ABAP", "page": 145, "routes": [ "quality", "oo" ], "key": true},
+        {"n": "4", "title": "Exception Classes and Design by Contract", "page": 199, "routes": [ "oo", "quality" ]},
+        {"n": "5", "title": "ABAP Unit and Test-Driven Development", "page": 233, "routes": [ "unit" ], "key": true},
+        {"n": "6", "title": "Database Programming with SAP HANA", "page": 291, "routes": [ "sql" ]},
+        {"n": "8", "title": "Business Logic Using the ABAP RESTful Application Programming Model", "page": 453, "routes": [ "rap" ]},
+        {"n": "9", "title": "Service Layer", "page": 521, "routes": [ "odata" ]},
+        {"n": "10", "title": "ALV SALV Reporting Framework", "page": 567, "routes": [ "classic" ], "key": true},
+        {"n": "11", "title": "ABAP2XLSX and Beyond", "page": 631, "routes": [ "utilities" ]},
+        {"n": "13", "title": "SAPUI5", "page": 755, "routes": [ "ui" ]}
+      ]
+    },
+    {
+      "slug": "complete-2022",
+      "title": "Complete ABAP (2022)",
+      "pdf": "Complete ABAP (2022)/Complete ABAP (2022).pdf",
+      "domains": [
+        "OO",
+        "SQL",
+        "ENH",
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "5", "title": "Structures and Internal Tables", "page": 135, "routes": [ "classic", "oo" ]},
+        {"n": "7", "title": "Modularization Techniques", "page": 213, "routes": [ "classic" ]},
+        {"n": "8", "title": "Object-Oriented ABAP", "page": 267, "routes": [ "oo" ], "key": true},
+        {"n": "9", "title": "Exception Handling", "page": 319, "routes": [ "oo" ]},
+        {"n": "10", "title": "ABAP Data Dictionary", "page": 341, "routes": [ "ddic" ], "key": true},
+        {"n": "11", "title": "Persistent Data", "page": 405, "routes": [ "sql", "utilities" ]},
+        {"n": "12", "title": "Dialog Programming", "page": 439, "routes": [ "classic" ]},
+        {"n": "14", "title": "Selection Screens", "page": 519, "routes": [ "classic" ]},
+        {"n": "15", "title": "SAP List Viewer Reports", "page": 541, "routes": [ "classic" ]},
+        {"n": "16", "title": "Dynamic Programming", "page": 579, "routes": [ "oo" ]},
+        {"n": "17", "title": "Debugging", "page": 611, "routes": [ "tooling" ]},
+        {"n": "18", "title": "Forms", "page": 631, "routes": [ "classic" ]},
+        {"n": "19", "title": "Interfaces", "page": 699, "routes": [ "classic", "odata" ]},
+        {"n": "20", "title": "Modifications and Enhancements", "page": 801, "routes": [ "enh" ], "key": true},
+        {"n": "21", "title": "Test and Analysis Tools", "page": 847, "routes": [ "unit", "atc" ], "key": true}
+      ]
+    },
+    {
+      "slug": "gateway-2024",
+      "title": "SAP Gateway and OData (2024)",
+      "pdf": "SAP Gateway and OData (2024)/SAP Gateway and OData (2024).pdf",
+      "domains": [
+        "API",
+        "RAP",
+        "UI"
+      ],
+      "chapters": [
+        {"n": "2", "title": "Introduction to OData", "page": 59, "routes": [ "odata" ], "key": true},
+        {"n": "5", "title": "Introduction to OData Service Creation", "page": 179, "routes": [ "odata" ]},
+        {"n": "6", "title": "Service Development", "page": 223, "routes": [ "odata", "migration" ]},
+        {"n": "7", "title": "Service Generation", "page": 337, "routes": [ "odata" ]},
+        {"n": "8", "title": "ABAP Programming Model for SAP Fiori", "page": 395, "routes": [ "odata", "migration" ]},
+        {"n": "9", "title": "ABAP RESTful Application Programming Model", "page": 441, "routes": [ "rap", "odata" ], "key": true},
+        {"n": "10", "title": "SAPUI5 Application Development", "page": 507, "routes": [ "ui" ]},
+        {"n": "12", "title": "Extensibility", "page": 551, "routes": [ "enh", "odata" ]},
+        {"n": "16", "title": "Lifecycle Management: Testing, Service Deployment, and Operations", "page": 701, "routes": [ "odata", "transport" ]},
+        {"n": "17", "title": "Security", "page": 731, "routes": [ "auth", "odata" ]}
+      ]
+    },
+    {
+      "slug": "ui5-2025",
+      "title": "SAPUI5 - The Comprehensive Guide (2025)",
+      "pdf": "SAPUI5 - The Comprehensive Guide (2025)/SAPUI5 - The Comprehensive Guide (2025).pdf",
+      "supplements": "SAPUI5 - The Comprehensive Guide (2025)/supplements/978-1-4932-2660-3.zip",
+      "supplements_note": "Apps de ejemplo (FCL, split app, navegación).",
+      "domains": [
+        "UI"
+      ],
+      "chapters": [
+        {"n": "9", "title": "OData Service Integration", "page": 369, "routes": [ "ui", "odata" ]},
+        {"n": "11", "title": "OData Version 4 Model", "page": 409, "routes": [ "ui", "odata" ]},
+        {"n": "14", "title": "SAP Fiori Elements", "page": 533, "routes": [ "ui" ], "key": true},
+        {"n": "16", "title": "Deployment", "page": 639, "routes": [ "ui", "transport" ]},
+        {"n": "17", "title": "SAP Fiori Launchpad Configuration", "page": 667, "routes": [ "ui" ], "key": true},
+        {"n": "18", "title": "Debugging and Code Quality", "page": 699, "routes": [ "ui" ]}
+      ]
+    },
+    {
+      "slug": "btp-appdev-2023",
+      "title": "Application Development with SAP Business Technology Platform (2023)",
+      "pdf": "Application Development with SAP Business Technology Platform (2023)/Application Development with SAP Business Technology Platform (2023).pdf",
+      "domains": [
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "9", "title": "Developing ABAP Applications", "page": 239, "routes": [ "cloud" ]},
+        {"n": "11", "title": "Developing SAP Fiori Applications", "page": 319, "routes": [ "ui" ]},
+        {"n": "12", "title": "DevOps Implementation", "page": 355, "routes": [ "transport" ]},
+        {"n": "13", "title": "Security", "page": 393, "routes": [ "auth" ]}
+      ]
+    },
+    {
+      "slug": "clean-abap-2020",
+      "title": "Clean ABAP - A Style Guide for Developers (Haeuptle et al., 2020)",
+      "pdf": "Otro Libros/761265380-Haeuptle-K-Clean-ABAP-a-Style-Guide-for-Developers-2020.pdf",
+      "txt": "Otro Libros/761265380-Haeuptle-K-Clean-ABAP-a-Style-Guide-for-Developers-2020.txt",
+      "domains": [
+        "OO"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Libro completo: nombres, métodos, clases, excepciones, comentarios, pruebas", "page": null, "routes": [ "quality", "oo", "unit" ], "key": true}
+      ]
+    },
+    {
+      "slug": "adt-eclipse",
+      "title": "ABAP Eclipse Guide (ADT)",
+      "pdf": "Otro Libros/711465944-ABAP-Eclipse-Guide.pdf",
+      "txt": "Otro Libros/711465944-ABAP-Eclipse-Guide.txt",
+      "domains": [
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "*", "title": "ABAP Development Tools: navegación, refactoring, depuración", "page": null, "routes": [ "tooling" ]}
+      ]
+    },
+    {
+      "slug": "rap-2302",
+      "title": "SAP ABAP RESTful Application Programming (2302)",
+      "pdf": "Otro Libros/651555255-SAP-ABAP-RESTful-Application-Programming-2302.pdf",
+      "txt": "Otro Libros/651555255-SAP-ABAP-RESTful-Application-Programming-2302.txt",
+      "domains": [
+        "RAP"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Material RAP 2302 (referencia complementaria a rap-2025)", "page": null, "routes": [ "rap" ]}
+      ]
+    },
+    {
+      "slug": "rap-joule",
+      "title": "SAP ABAP RAP + Joule: Full-Stack Development",
+      "pdf": "Otro Libros/915262539-SAP-ABAP-RAP-Joule-to-Develop-Full-Stack-Development.pdf",
+      "txt": "Otro Libros/915262539-SAP-ABAP-RAP-Joule-to-Develop-Full-Stack-Development.txt",
+      "domains": [
+        "RAP",
+        "UI"
+      ],
+      "chapters": [
+        {"n": "*", "title": "RAP full-stack asistido por Joule", "page": null, "routes": [ "rap", "ui" ]}
+      ]
+    },
+    {
+      "slug": "fiori-joule",
+      "title": "SAP Fiori Implementation and Development with Joule",
+      "pdf": "Otro Libros/915265907-SAP-Fiori-Implementation-and-Development-With-Joule-App.pdf",
+      "txt": "Otro Libros/915265907-SAP-Fiori-Implementation-and-Development-With-Joule-App.txt",
+      "domains": [
+        "UI"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Implementación Fiori y apps con Joule", "page": null, "routes": [ "ui" ]}
+      ]
+    },
+    {
+      "slug": "fiori-completo",
+      "title": "SAP Fiori Completo",
+      "pdf": "Otro Libros/567332299-Sap-Fiori-Completo.pdf",
+      "txt": "Otro Libros/567332299-Sap-Fiori-Completo.txt",
+      "domains": [
+        "UI"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Fiori: launchpad, catálogos, roles", "page": null, "routes": [ "ui" ]}
+      ]
+    },
+    {
+      "slug": "workflow",
+      "title": "ABAP Development for SAP Business Workflow",
+      "pdf": "Otro Libros/788473644-ABAP-Development-for-SAP-Business-Workflow-Copy-Yadp-82bf-q76m-Iuzh.pdf",
+      "txt": "Otro Libros/788473644-ABAP-Development-for-SAP-Business-Workflow-Copy-Yadp-82bf-q76m-Iuzh.txt",
+      "domains": [
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Business Workflow: tareas, eventos, clases de workflow", "page": null, "routes": [ "workflow" ]}
+      ]
+    },
+    {
+      "slug": "function-modules",
+      "title": "Function Modules in ABAP",
+      "pdf": "Otro Libros/780119305-Function-Modules-in-ABAP.pdf",
+      "domains": [
+        "OO"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Módulos de función, RFC y BAPI (ABAP clásico)", "page": null, "routes": [ "classic" ]}
+      ]
+    },
+    {
+      "slug": "s4-conversion",
+      "title": "SAP S/4HANA Conversion",
+      "pdf": "Otro Libros/682848062-SAP-S4HANA-Conversion.pdf",
+      "domains": [
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Conversión a S/4HANA y adaptación de código custom", "page": null, "routes": [ "migration" ]}
+      ]
+    },
+    {
+      "slug": "pm-config-2025",
+      "title": "Configuring Plant Maintenance in SAP S/4HANA (2025)",
+      "pdf": "Configuring Plant Maintenance in SAP S4HANA (2025)/Configuring Plant Maintenance in SAP S4HANA (2025).pdf",
+      "domains": [
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Contexto funcional PM: equipos, ubicaciones técnicas, avisos, órdenes", "page": null, "routes": [ "pm" ]}
+      ]
+    },
+    {
+      "slug": "pm-user-2021",
+      "title": "Plant Maintenance with SAP S/4HANA - Business User Guide (2021)",
+      "pdf": "Plant Maintenance with SAP S4HANA Business User Guide (2021)/Plant Maintenance with SAP S4HANA Business User Guide (2021).pdf",
+      "domains": [
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Procesos PM de usuario final", "page": null, "routes": [ "pm" ]}
+      ]
+    },
+    {
+      "slug": "am-2023",
+      "title": "SAP S/4HANA Asset Management: Configure, Equip and Manage (2023)",
+      "pdf": "Otro Libros/714733207-SAP-S-4HANA-Asset-Management-Configure-Equip-and-Manage-2023.pdf",
+      "domains": [
+        "MIX"
+      ],
+      "chapters": [
+        {"n": "*", "title": "Asset Management: datos maestros y procesos", "page": null, "routes": [ "pm" ]}
+      ]
+    }
+  ],
+  "out_of_scope": [
+    "Cloud Integration with SAP Integration Suite (2024), SAP Cloud Integration Cookbook (2026), Practical SAP Integration Suite, SAP CPI DS Doc, preguntas C_CPI, Integration Flow Design Guidelines 2026: usar en labs de CPI / Integration Suite.",
+    "Nuevos recursos (AIG10, BTP100, CLD900, AI Core, Generative AI hub, vídeos .mp4): usar en labs de BTP / SAP Business AI.",
+    "SAP Cloud Platform / BTP Integration (Otro Libros), Material Requirements Planning (2020), Sourcing and Procurement (2024): contexto funcional no ABAP.",
+    "zabapgit_standalone.prog.abap.txt: no instalar; abapGit ICF está inactivo en este sistema (CTS-001)."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "{{CASE_ID}}",
+  "kind": "practice_case",
+  "title": "{{TITLE}}",
+  "domain": "{{DOMAIN}}",
+  "capability": "{{CAPABILITY}}",
+  "level": "{{LEVEL}}",
+  "time_min": 45,
+  "package": "{{PACKAGE}}",
+  "status": "planned",
+  "resolved": false,
+  "ready_to_consolidate": false,
+  "consolidated_on": null,
+  "created_on": "{{DATE}}",
+  "system_config": "../../config/system.yaml",
+  "notes": "Caso generado; completar el brief antes de construir."
+}

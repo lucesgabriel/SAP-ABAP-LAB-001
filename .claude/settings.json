@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "extraKnownMarketplaces": {
+    "abap-skills": {
+      "source": { "source": "github", "repo": "likweitan/abap-skills" }
+    },
+    "claude-abap-skills": {
+      "source": { "source": "github", "repo": "matt1as/claude-abap-skills" }
+    },
+    "arc-1": {
+      "source": { "source": "github", "repo": "arc-mcp/arc-1" }
+    }
+  },
+  "enabledPlugins": {
+    "sap-abap@abap-skills": true,
+    "clean-abap@claude-abap-skills": true,
+    "abap-cloud-rap@claude-abap-skills": true,
+    "arc-1@arc-1": true
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/scripts/workspace/skill_router.py\" session-start",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/scripts/workspace/skill_router.py\" prompt",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

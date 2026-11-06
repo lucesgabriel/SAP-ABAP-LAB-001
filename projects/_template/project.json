@@ -6,5 +6,8 @@
   "created_on": "{{CREATED_ON}}",
   "system_config": "../../config/system.yaml",
   "sap_package": null,
-  "transport_request": null
+  "transport_request": null,
+  "capability": "MULTI",
+  "ready_to_consolidate": false,
+  "consolidated_on": null
 }
