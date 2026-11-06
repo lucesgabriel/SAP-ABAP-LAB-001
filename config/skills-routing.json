@@ -157,7 +157,7 @@
     {
       "id": "workflow",
       "label": "Business Workflow",
-      "keywords": ["workflow", "flujo de trabajo", "swdd", "work item"],
+      "keywords": ["business workflow", "sap workflow", "abap workflow", "workflow de sap", "workflow sap", "flujo de trabajo sap", "workflow template", "plantilla de workflow", "if_workflow", "swdd", "swi1", "swu3", "work item", "workitem"],
       "skills": ["anthropic-skills:abap-senior"],
       "kb": []
     }

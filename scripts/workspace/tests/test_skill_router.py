@@ -62,6 +62,12 @@ class MatchTests(unittest.TestCase):
         self.assertEqual(skill_router.suggest(event, ROOT), "")
         self.assertNotIn("pm", self.ids("tabla de mantenimiento y notification por correo"))
 
+    def test_workflow_needs_specific_phrase(self):
+        gh_output = "Token scopes: 'gist', 'read:org', 'repo', 'workflow'"
+        self.assertNotIn("workflow", self.ids(gh_output))
+        self.assertNotIn("workflow", self.ids("mi flujo de trabajo diario con Git"))
+        self.assertIn("workflow", self.ids("crear un business workflow con SWDD"))
+
     def test_no_match_returns_empty(self):
         self.assertEqual(skill_router.suggest("hola, buenos días", ROOT), "")
 
