@@ -9,7 +9,7 @@
   "phases": [
     {"phase": "Kickoff y diseño (prompts/00, 01)", "skills": ["sap-abap:abap-cloud", "sap-abap:released-abap-classes"]},
     {"phase": "Build (prompts/02)", "skills": ["anthropic-skills:abap-senior", "sap-abap:abap-sql-amdp"]},
-    {"phase": "Verificación (prompts/03)", "skills": ["sap-abap:abap", "sap-abap:atc-cloudification", "sap-abap:abap-unit-testing", "clean-abap:review"]},
+    {"phase": "Verificación (prompts/03)", "skills": ["sap-abap:abap", "sap-abap:atc-cloudification", "sap-abap:abap-unit-testing", "clean-abap:review", "clean-abap-guide"]},
     {"phase": "Caso de práctica (prompts/04)", "skills": ["skill del dominio", "anthropic-skills:abap-senior"]},
     {"phase": "Cierre (prompts/05)", "skills": ["arc-1:sap-object-documenter", "arc-1:sap-transport-review"]}
   ],
@@ -18,7 +18,7 @@
       "id": "rap",
       "label": "RAP / business object",
       "keywords": ["rap", "behavior definition", "behaviour definition", "bdef", "behavior pool", "eml", "modify entities", "read entities", "managed", "unmanaged", "draft", "determination", "validation", "validación", "determinación", "action", "acción", "etag", "business object", "late numbering", "early numbering", "instance feature", "feature control"],
-      "skills": ["sap-abap:rap", "anthropic-skills:abap-rap-senior", "abap-cloud-rap:rap-bo-design", "arc-1:generate-rap-service", "arc-1:generate-rap-logic"],
+      "skills": ["sap-abap:rap", "anthropic-skills:abap-rap-senior", "abap-rap", "abap-cloud-rap:rap-bo-design", "arc-1:generate-rap-service", "arc-1:generate-rap-logic"],
       "kb": ["P-003", "checklists/rap-release-gate.md"]
     },
     {
@@ -74,7 +74,7 @@
       "id": "quality",
       "label": "Calidad / Clean ABAP",
       "keywords": ["clean abap", "abaplint", "lint", "review", "revisión", "revisar código", "code review", "refactor", "refactorizar", "naming", "nombres", "code quality", "calidad", "best practice", "buenas prácticas", "documentar", "document"],
-      "skills": ["sap-abap:abap", "clean-abap:review", "clean-abap:refactor", "arc-1:sap-object-documenter"],
+      "skills": ["sap-abap:abap", "clean-abap:review", "clean-abap-guide", "clean-abap:refactor", "arc-1:sap-object-documenter"],
       "kb": ["TOOL-004"]
     },
     {

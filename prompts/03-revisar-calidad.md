@@ -4,7 +4,7 @@ Usa el proyecto `projects/<id>/` del workspace `SAP ABAP LAB 001`. Los objetos e
 
 ## Skills a cargar
 
-`sap-abap:abap` (abaplint + Clean ABAP), `sap-abap:atc-cloudification` (variantes y niveles clean core), `sap-abap:abap-unit-testing` (test doubles). Como segunda revisión de estilo: `/clean-abap:review` en Claude Code o la skill Clean ABAP de Attila Berencsi.
+`sap-abap:abap` (abaplint + Clean ABAP), `sap-abap:atc-cloudification` (variantes y niveles clean core), `sap-abap:abap-unit-testing` (test doubles). Como segunda revisión de estilo: `/clean-abap:review` en Claude Code o `clean-abap-guide` (Clean ABAP de Attila Berencsi, en `.claude/skills/`).
 
 **Libros de referencia.** Referencia de estilo: `clean-abap-2020` (libro completo); pruebas: `attf-2022` cap.5 y `cds-2024` cap.16; herramientas: `complete-2022` cap.21.
 

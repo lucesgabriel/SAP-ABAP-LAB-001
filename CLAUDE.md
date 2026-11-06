@@ -5,6 +5,7 @@ Lee y aplica íntegramente `AGENTS.md` antes de trabajar. Este archivo solo adap
 ## Plugins y skills disponibles
 - `clean-abap@claude-abap-skills`, `abap-cloud-rap@claude-abap-skills`, `arc-1@arc-1`
 - Plugin **SAP ABAP** de la SAP AI Skills Library (`sap-abap:*`, 18 skills) y `anthropic-skills:abap-senior` / `abap-rap-senior`
+- Skills del proyecto en `.claude/skills/` (comunitarias, revisadas): `abap-rap` (Daniel Krompaß) y `clean-abap-guide` (Attila Berencsi). Origen y commit en `.claude/skills/README.md`.
 - Qué skill cargar en cada fase: tabla "Selección de skills" de `AGENTS.md`; cada prompt de `prompts/` la repite en su cabecera.
 - **Automático:** `.claude/settings.json` habilita estos plugins en el proyecto y sus hooks (`SessionStart`, `UserPromptSubmit`) ejecutan `scripts/workspace/skill_router.py`, que inyecta en cada mensaje las skills, códigos KB y capítulos de libro del dominio detectado. Si aparece el bloque `[SAP-ABAP-LAB-001 · skill-router]`, carga esas skills con la herramienta Skill antes de diseñar o escribir código.
 - **Libros:** `config/books.json` + `scripts/workspace/books.py` (`chapters`, `search`, `index`). Cita `slug cap.N p.X`; nunca copies su texto.
