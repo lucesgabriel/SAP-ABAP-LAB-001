@@ -1,0 +1,170 @@
+{
+  "_comment": "Fuente única del ruteo automático de skills y libros. La lee scripts/workspace/skill_router.py (hooks SessionStart y UserPromptSubmit de .claude/settings.json). 'keywords' se comparan en minúsculas como palabra o frase completa; 'routes' de config/books.json usa los mismos id. Cambiar aquí y no en el hook.",
+  "max_routes_per_prompt": 3,
+  "max_book_refs": 4,
+  "always": {
+    "note": "Todas las fases: AGENTS.md (flujo P-002), knowledge-base/ y checklists/abap-quality-gate.md.",
+    "skills": []
+  },
+  "phases": [
+    {"phase": "Kickoff y diseño (prompts/00, 01)", "skills": ["sap-abap:abap-cloud", "sap-abap:released-abap-classes"]},
+    {"phase": "Build (prompts/02)", "skills": ["anthropic-skills:abap-senior", "sap-abap:abap-sql-amdp"]},
+    {"phase": "Verificación (prompts/03)", "skills": ["sap-abap:abap", "sap-abap:atc-cloudification", "sap-abap:abap-unit-testing", "clean-abap:review"]},
+    {"phase": "Caso de práctica (prompts/04)", "skills": ["skill del dominio", "anthropic-skills:abap-senior"]},
+    {"phase": "Cierre (prompts/05)", "skills": ["arc-1:sap-object-documenter", "arc-1:sap-transport-review"]}
+  ],
+  "routes": [
+    {
+      "id": "rap",
+      "label": "RAP / business object",
+      "keywords": ["rap", "behavior definition", "behaviour definition", "bdef", "behavior pool", "eml", "modify entities", "read entities", "managed", "unmanaged", "draft", "determination", "validation", "validación", "determinación", "action", "acción", "etag", "business object", "late numbering", "early numbering", "instance feature", "feature control"],
+      "skills": ["sap-abap:rap", "anthropic-skills:abap-rap-senior", "abap-cloud-rap:rap-bo-design", "arc-1:generate-rap-service", "arc-1:generate-rap-logic"],
+      "kb": ["P-003", "checklists/rap-release-gate.md"]
+    },
+    {
+      "id": "cds",
+      "label": "CDS view entities",
+      "keywords": ["cds", "view entity", "ddls", "association", "asociación", "annotation", "anotación", "composition", "projection", "proyección", "vdm", "virtual data model", "hierarchy", "jerarquía", "analytical query", "cube", "table function"],
+      "skills": ["sap-abap:cds-view-entities", "arc-1:generate-cds-analytical-query", "arc-1:generate-cds-unit-test"],
+      "kb": ["P-003"]
+    },
+    {
+      "id": "odata",
+      "label": "OData / servicios / APIs",
+      "keywords": ["odata", "gateway", "segw", "service binding", "service definition", "srvb", "srvd", "api", "http", "rest", "web api", "csrf", "communication scenario", "consumo de api", "service consumption"],
+      "skills": ["sap-abap:odata", "arc-1:migrate-segw-to-rap"],
+      "kb": ["API-001", "P-004"]
+    },
+    {
+      "id": "sql",
+      "label": "ABAP SQL / AMDP / HANA",
+      "keywords": ["sql", "abap sql", "open sql", "select", "amdp", "sqlscript", "hana", "performance", "rendimiento", "join", "cte", "window function", "native sql", "st05", "sql trace"],
+      "skills": ["sap-abap:abap-sql-amdp", "arc-1:debug-slow-sql"],
+      "kb": []
+    },
+    {
+      "id": "enh",
+      "label": "Extensiones / BAdI",
+      "keywords": ["badi", "enhancement", "ampliación", "user exit", "customer exit", "enhancement spot", "extensión", "extension", "extensibility", "extensibilidad", "implicit enhancement", "key user"],
+      "skills": ["sap-abap:badi-enhancement", "abap-cloud-rap:clean-core-check"],
+      "kb": []
+    },
+    {
+      "id": "auth",
+      "label": "Autorizaciones / IAM",
+      "keywords": ["authorization", "autorización", "authority-check", "authority check", "pfcg", "dcl", "access control", "iam", "business catalog", "iam app", "objeto de autorización", "auth object", "su24"],
+      "skills": ["sap-abap:authorization-iam"],
+      "kb": []
+    },
+    {
+      "id": "cloud",
+      "label": "ABAP Cloud / clean core",
+      "keywords": ["abap cloud", "clean core", "released", "liberado", "liberada", "c1", "tier", "nivel a", "nivel b", "cloud readiness", "cloudification", "sy-", "api_state", "released api", "api liberada", "on-stack"],
+      "skills": ["sap-abap:abap-cloud", "sap-abap:released-abap-classes", "abap-cloud-rap:clean-core-check"],
+      "kb": ["D-008", "R-007", "P-001", "checklists/clean-core-gate.md"]
+    },
+    {
+      "id": "migration",
+      "label": "Migración de código clásico",
+      "keywords": ["migrar", "migración", "migration", "migrate", "custom code", "código custom", "legacy", "modernizar", "modernize", "s/4hana conversion", "conversión", "refactor a cloud"],
+      "skills": ["sap-abap:abap-cloud-migration", "arc-1:migrate-custom-code", "arc-1:sap-migration-dossier"],
+      "kb": ["P-001"]
+    },
+    {
+      "id": "quality",
+      "label": "Calidad / Clean ABAP",
+      "keywords": ["clean abap", "abaplint", "lint", "review", "revisión", "revisar código", "code review", "refactor", "refactorizar", "naming", "nombres", "code quality", "calidad", "best practice", "buenas prácticas", "documentar", "document"],
+      "skills": ["sap-abap:abap", "clean-abap:review", "clean-abap:refactor", "arc-1:sap-object-documenter"],
+      "kb": ["TOOL-004"]
+    },
+    {
+      "id": "unit",
+      "label": "ABAP Unit",
+      "keywords": ["abap unit", "unit test", "prueba unitaria", "pruebas unitarias", "test double", "tdd", "test class", "for testing", "cds test environment", "osql test environment", "mock"],
+      "skills": ["sap-abap:abap-unit-testing", "arc-1:generate-abap-unit-test", "arc-1:generate-cds-unit-test"],
+      "kb": []
+    },
+    {
+      "id": "atc",
+      "label": "ATC",
+      "keywords": ["atc", "abap test cockpit", "code inspector", "sci", "check variant", "variante", "abap_cloud_readiness", "finding", "hallazgo", "exemption", "exención"],
+      "skills": ["sap-abap:atc-cloudification", "abap-cloud-rap:atc-remediation", "arc-1:sap-clean-core-atc"],
+      "kb": ["ATC-001", "P-005"]
+    },
+    {
+      "id": "classic",
+      "label": "ABAP clásico",
+      "keywords": ["report", "reporte", "alv", "salv", "dynpro", "module pool", "smartform", "smartforms", "adobe form", "bapi", "batch input", "call transaction", "function module", "módulo de función", "idoc", "selection screen", "pantalla de selección", "rfc"],
+      "skills": ["anthropic-skills:abap-senior", "sap-abap:abap-cloud-migration"],
+      "kb": ["P-001"]
+    },
+    {
+      "id": "utilities",
+      "label": "Utilidades de aplicación (cookbook)",
+      "keywords": ["application log", "log de aplicación", "bal", "change document", "documento de modificación", "lock object", "objeto de bloqueo", "enqueue", "number range", "rango de números", "background job", "job", "bgpf", "email", "correo", "parallel", "paralelo", "file upload", "excel", "xlsx", "business configuration", "bc maintenance"],
+      "skills": ["sap-abap:released-abap-classes", "sap-abap:abap-cloud"],
+      "kb": []
+    },
+    {
+      "id": "ddic",
+      "label": "DDIC",
+      "keywords": ["ddic", "tabla", "table", "domain", "dominio", "data element", "elemento de datos", "structure", "estructura", "se11"],
+      "skills": ["anthropic-skills:abap-senior", "sap-abap:abap-cloud"],
+      "kb": []
+    },
+    {
+      "id": "oo",
+      "label": "ABAP Objects",
+      "keywords": ["clase", "class", "interface", "interfaz", "método", "method", "exception class", "excepción", "design pattern", "patrón de diseño", "if_oo_adt_classrun", "oo"],
+      "skills": ["anthropic-skills:abap-senior", "sap-abap:abap-cloud", "clean-abap:review"],
+      "kb": ["P-001"]
+    },
+    {
+      "id": "ui",
+      "label": "Fiori / UI5",
+      "keywords": ["fiori", "fiori elements", "ui5", "sapui5", "launchpad", "flp", "list report", "object page", "@ui", "ui annotation", "freestyle", "app fiori"],
+      "skills": ["sap-abap:rap", "sap-abap:sap-fiori-url-generator", "arc-1:convert-ui5-to-fiori-elements", "arc-1:modernize-ui5-app"],
+      "kb": []
+    },
+    {
+      "id": "transport",
+      "label": "Transportes / gCTS",
+      "keywords": ["transport", "transporte", "orden de transporte", "gcts", "abapgit", "se09", "se10", "release transport", "liberar"],
+      "skills": ["arc-1:sap-transport-review", "arc-1:sap-transport-overview"],
+      "kb": ["CTS-001", "D-007"]
+    },
+    {
+      "id": "tooling",
+      "label": "ADT / herramientas",
+      "keywords": ["adt", "eclipse", "debugger", "depurar", "debug", "dump", "st22", "arc-1", "mcp"],
+      "skills": ["arc-1:explain-abap-code", "arc-1:bootstrap-system-context"],
+      "kb": ["TOOL-003"]
+    },
+    {
+      "id": "diagram",
+      "label": "Arquitectura / diagramas",
+      "keywords": ["diagrama", "diagram", "arquitectura", "architecture"],
+      "skills": ["sap-abap:btp-diagram-generator"],
+      "kb": []
+    },
+    {
+      "id": "pm",
+      "label": "Dominio Plant Maintenance",
+      "keywords": ["equipo", "equipos", "equipment", "ubicación técnica", "functional location", "aviso de mantenimiento", "aviso pm", "maintenance notification", "orden de mantenimiento", "maintenance order", "plan de mantenimiento", "maintenance plan", "plant maintenance", "pm", "asset management", "iw21", "iw31", "ie01"],
+      "skills": ["sap-abap:cds-view-entities", "sap-abap:released-abap-classes"],
+      "kb": []
+    },
+    {
+      "id": "workflow",
+      "label": "Business Workflow",
+      "keywords": ["workflow", "flujo de trabajo", "swdd", "work item"],
+      "skills": ["anthropic-skills:abap-senior"],
+      "kb": []
+    }
+  ],
+  "do_not_load_by_default": {
+    "sap-abap:btp-abap-environment": "El laboratorio es S/4HANA 2025 on-premise, no SAP BTP ABAP environment.",
+    "sap-abap:abapgit": "Endpoint ICF de abapGit inactivo; se usa gCTS (CTS-001).",
+    "sap-abap:rap-business-events": "Solo si el usuario pide eventos RAP explícitamente."
+  }
+}
