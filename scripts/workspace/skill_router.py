@@ -56,10 +56,15 @@ SYSTEM_MARKERS = ("<task-notification>", "[SYSTEM NOTIFICATION", "<system-remind
                   "<ci-monitor-event>")
 
 
+# Comandos y eventos de la app que llegan envueltos en una etiqueta propia, p. ej.
+# <create-pr-command>, <commit-command>, <side-sessions-event>, <task-notification>.
+APP_TAG = re.compile(r"^<[a-z][a-z0-9-]*-(?:command|event|notification)\b")
+
+
 def is_system_message(text: str) -> bool:
-    """Eventos automáticos del harness que llegan como prompt; no son peticiones del usuario."""
+    """Eventos y comandos automáticos de la app; no son peticiones redactadas por el usuario."""
     head = text.lstrip()[:200]
-    return any(marker in head for marker in SYSTEM_MARKERS)
+    return bool(APP_TAG.match(head)) or any(marker in head for marker in SYSTEM_MARKERS)
 
 
 def suggest(text: str, root: Path = ROOT) -> str:

@@ -12,7 +12,8 @@
 - [ ] Generar el primer caso de práctica por dominio (`OO`, `CDS`, `RAP`) con `new_case.py` y redactar brief + solución con `prompts/04`.
 - [ ] Evaluar una tarea agendada semanal que ejecute `close_project.py` sobre proyectos con `ready_to_consolidate: true` (equivalente a `sap-codex-lab-weekly-consolidation` del Integration Suite Lab).
 - [ ] Revisar trimestralmente el `knowledge-base/`: obsoletos con fecha y reemplazo, nunca renumerar.
-- [ ] Localizar el repositorio de las skills comunitarias de la SAP AI Skills Library que no están instaladas — **ABAP RAP** (Daniel Krompaß), **Clean ABAP** (Attila Berencsi) y **Off-Stack ABAP Unit + abaplint CI** (Alok Mehta) — inspeccionar su contenido y, si aportan, añadirlas a `.claude/settings.json` y a `config/skills-routing.json`.
+- [x] Skills comunitarias revisadas el 2026-11-06: `abap-rap` (Krompaß) y `clean-abap-guide` (Berencsi) vendorizadas en `.claude/skills/` (ver su README).
+- [ ] Evaluar **Off-Stack ABAP Unit + abaplint CI** (`alokm3hta-star/abap-offstack-testing`) cuando haya al menos un proyecto con ABAP Unit y fuentes serializadas por abapGit (`.clas.abap` + `.clas.xml`): añadiría un job de GitHub Actions con abaplint (dialecto `v816`) y AUnit transpilado. Un verde off-stack no sustituye ABAP Unit/ATC en el sistema.
 - [ ] Completar páginas `null` de `hana-2021` en `config/books.json` (el PDF no expone destinos en el índice) y regenerar `docs/guides/reference-library.md` con `books.py render`.
 - [ ] Tras el primer proyecto que cite libros, revisar si el ruteo de `config/skills-routing.json` sugirió los capítulos correctos y ajustar palabras clave.
 

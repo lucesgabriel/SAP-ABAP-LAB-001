@@ -99,10 +99,10 @@ Fuente principal: el plugin **SAP ABAP** de la SAP AI Skills Library (Lik Wei Ta
 | Fase / prompt | Skill principal | Complementarias | Para qué |
 |---|---|---|---|
 | Kickoff y diseño (`prompts/00`, `01`) | `sap-abap:abap-cloud` | `sap-abap:released-abap-classes`, `sap-abap:abap-cloud-migration` | Nivel clean core objetivo, reemplazos liberados (`D-008`, `R-00x`, `P-001`). |
-| Diseño RAP / CDS / OData | `sap-abap:rap` | `sap-abap:cds-view-entities`, `sap-abap:odata`, `anthropic-skills:abap-rap-senior` | BO, proyecciones, service binding (`P-003`, `rap-release-gate`). |
+| Diseño RAP / CDS / OData | `sap-abap:rap` | `sap-abap:cds-view-entities`, `sap-abap:odata`, `anthropic-skills:abap-rap-senior`, `abap-rap` (Krompaß, checklist de errores comunes) | BO, proyecciones, service binding (`P-003`, `rap-release-gate`). |
 | Diseño de extensiones y autorizaciones | `sap-abap:badi-enhancement` | `sap-abap:authorization-iam` | Dominio `ENH`, DCL, objetos de autorización. |
 | Build clásico / Clean ABAP (`prompts/02`) | `anthropic-skills:abap-senior` | `sap-abap:abap-sql-amdp` | Código ABAP, SQL moderno, AMDP solo con evidencia. |
-| Verificación (`prompts/03`) | `sap-abap:abap` (abaplint + Clean ABAP) | `sap-abap:atc-cloudification`, `sap-abap:abap-unit-testing`; `/clean-abap:review` o la skill **Clean ABAP** (Attila Berencsi) como segunda revisión de estilo | Lint clasificado (`TOOL-004`), ATC (`ATC-001`, `P-005`), ABAP Unit con test doubles. |
+| Verificación (`prompts/03`) | `sap-abap:abap` (abaplint + Clean ABAP) | `sap-abap:atc-cloudification`, `sap-abap:abap-unit-testing`; `/clean-abap:review` o `clean-abap-guide` (Clean ABAP de Attila Berencsi) como segunda revisión de estilo | Lint clasificado (`TOOL-004`), ATC (`ATC-001`, `P-005`), ABAP Unit con test doubles. |
 | Caso de práctica (`prompts/04`) | La del dominio del caso (tabla anterior) | `anthropic-skills:abap-senior` para el enunciado | Brief técnicamente correcto en S/4HANA 2025. |
 
 ### Ruteo automático (hooks)
@@ -112,7 +112,7 @@ Fuente principal: el plugin **SAP ABAP** de la SAP AI Skills Library (Lik Wei Ta
 
 Cuando el hook sugiera skills, cárgalas con la herramienta Skill antes de diseñar o escribir código (solo las pertinentes). Otros agentes obtienen lo mismo con `python scripts/workspace/skill_router.py suggest "<petición>"`. Para cambiar el ruteo se edita el JSON, no el script.
 
-No cargar por defecto en este sistema: `sap-abap:btp-abap-environment` (el laboratorio es S/4HANA on-premise, no Steampunk), `sap-abap:abapgit` (endpoint ICF inactivo, se usa gCTS — `CTS-001`), `sap-abap:rap-business-events`, `sap-abap:sap-fiori-url-generator`. Opcional: **Off-Stack ABAP Unit + abaplint CI** (Alok Mehta) para correr abaplint sobre `projects/<id>/src/` sin SAP antes del `SAPWrite`.
+No cargar por defecto en este sistema: `sap-abap:btp-abap-environment` (el laboratorio es S/4HANA on-premise, no Steampunk), `sap-abap:abapgit` (endpoint ICF inactivo, se usa gCTS — `CTS-001`), `sap-abap:rap-business-events`, `sap-abap:sap-fiori-url-generator`. Skills comunitarias vendorizadas en `.claude/skills/` (`abap-rap`, `clean-abap-guide`): revisadas y con origen y commit en `.claude/skills/README.md`; ante conflicto mandan `standards/` y el KB. **Off-Stack ABAP Unit + abaplint CI** (Alok Mehta) no está instalada: candidata en `learning/backlog.md`.
 
 ### Hermes Desktop
 Equivalentes locales: `clean-abap-review`, `clean-abap-refactor`, `abap-cloud-rap-design`, `abap-atc-remediation`, `abap-clean-core-check`, `sap-abap-agentic-development`.
