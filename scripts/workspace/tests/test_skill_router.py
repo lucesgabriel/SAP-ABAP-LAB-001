@@ -62,6 +62,12 @@ class MatchTests(unittest.TestCase):
         self.assertEqual(skill_router.suggest(event, ROOT), "")
         self.assertNotIn("pm", self.ids("tabla de mantenimiento y notification por correo"))
 
+    def test_ignores_app_commands(self):
+        for command in ("<create-pr-command>\nCreate a PR ready for review (not a draft) for the report",
+                        "<commit-command>review draft</commit-command>"):
+            self.assertEqual(skill_router.suggest(command, ROOT), "")
+        self.assertIn("sap-abap:rap", skill_router.suggest("revisa el draft del BO RAP", ROOT))
+
     def test_workflow_needs_specific_phrase(self):
         gh_output = "Token scopes: 'gist', 'read:org', 'repo', 'workflow'"
         self.assertNotIn("workflow", self.ids(gh_output))
